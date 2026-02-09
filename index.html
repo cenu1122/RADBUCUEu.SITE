@@ -6,8 +6,19 @@
 <title>Zapošljavanje Njemačka</title>
 
 <style>
-body{margin:0;font-family:Arial, Helvetica, sans-serif;background:#f4f4f4;}
-header{background:#003cff;color:white;padding:40px 20px;text-align:center;}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f4f4;
+}
+
+header{
+  background:#003cff;
+  color:white;
+  padding:40px 20px;
+  text-align:center;
+}
+
 header h1{font-size:36px;}
 header p{font-size:20px;margin-bottom:20px;}
 header img{max-width:80%;border-radius:12px;margin-top:20px;}
@@ -22,8 +33,31 @@ header img{max-width:80%;border-radius:12px;margin-top:20px;}
   text-decoration:none;
   border-radius:30px;
   font-size:18px;
+  transition:0.3s;
 }
-.nav a:hover{background:#e0e0e0;}
+
+.nav a:hover{
+  background:#e0e0e0;
+}
+
+/* PRIJAVA dugme – posebno */
+.nav a.prijava{
+  background:#ffcc00;
+  color:#003cff;
+  animation:pulse 2s infinite;
+}
+
+.nav a.prijava:hover{
+  background:#ffd633;
+  transform:scale(1.05);
+}
+
+/* puls animacija */
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,204,0,0.7);}
+  70%{box-shadow:0 0 0 15px rgba(255,204,0,0);}
+  100%{box-shadow:0 0 0 0 rgba(255,204,0,0);}
+}
 
 section{
   max-width:1000px;
@@ -33,6 +67,7 @@ section{
   border-radius:12px;
   text-align:center;
 }
+
 section h2{font-size:32px;margin-bottom:20px;}
 section p{font-size:18px;line-height:1.6;margin-bottom:20px;}
 section img{max-width:80%;border-radius:10px;margin-top:20px;}
@@ -54,12 +89,20 @@ section img{max-width:80%;border-radius:10px;margin-top:20px;}
   <h1>ZAPOŠLJAVANJE U NJEMAČKOJ</h1>
   <p>Pouzdano • Brzo • Transparentno</p>
   <img src="pocetna.png" alt="Početna">
+
   <div class="nav">
     <a href="#onama">O NAMA</a>
     <a href="#zastomi">ZAŠTO MI</a>
     <a href="#usluge">USLUGE</a>
     <a href="#recenzije">RECENZIJE</a>
     <a href="#kontakt">KONTAKT</a>
+
+    <!-- PRIJAVA dugme -->
+    <a class="prijava"
+       href="https://docs.google.com/forms/d/1KNB6Hb0sGbP_iAc0YyMjbBcgPLIpNhXkVIcbkHAJR0w/viewform"
+       target="_blank">
+      PRIJAVA
+    </a>
   </div>
 </header>
 
@@ -80,25 +123,6 @@ section img{max-width:80%;border-radius:10px;margin-top:20px;}
 <section id="usluge">
   <h2>USLUGE</h2>
   <p>Zavarivači, električari, CNC operateri, građevina i pomoćni radnici.</p>
-
-  <!-- DUGME ZA PRIJAVU -->
-  <p style="margin-top:30px;">
-    <a href="https://docs.google.com/forms/d/1KNB6Hb0sGbP_iAc0YyMjbBcgPLIpNhXkVIcbkHAJR0w/viewform"
-       target="_blank"
-       style="
-         display:inline-block;
-         padding:15px 40px;
-         background:#003cff;
-         color:white;
-         font-weight:bold;
-         font-size:20px;
-         text-decoration:none;
-         border-radius:30px;
-       ">
-      PRIJAVA
-    </a>
-  </p>
-
   <img src="usluge.png">
   <a href="#top" class="back">⬆ POVRATAK</a>
 </section>
